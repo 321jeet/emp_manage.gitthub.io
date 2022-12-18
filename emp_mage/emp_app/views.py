@@ -6,7 +6,7 @@ from django.http import HttpResponse
 from django.db.models import Q
 
 # Create your views here.
-def Home(request):
+def Index(request):
 
     all_empy=Employee.objects.all()
 
