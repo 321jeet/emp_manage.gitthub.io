@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block contentbody %}
+
+<div class="container">
+    <hr>
+
+    <h3 class="text center">filter Employee</h3>
+    <hr>.
+    <form action="/flt_emp" method="POST">
+        {% csrf_token %}
+        <div class="col-md-10">
+            <label for="fullname" class="form-label">First/Last Name</label>
+            <input type="text" class="form-control" value="{{name}}" name="name" id="fname">
+        </div>
+       
+        <div class="col-md-10">
+            <label for="department" class="form-label">Department</label>
+            <input type="text" class="form-control" id="dept" value="{{dept}}" name="dept" >
+        </div>
+        <div class="col-md-10">
+            <label for="lastname" class="form-label">Role</label>
+            <input type="text" class="form-control" name="role" value="{{role}}" id="role">
+        </div>
+  
+</div>
+
+
+{% endblock contentbody %}

@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block contentbody %}
+
+<div class="container">
+    <hr>
+
+    <h3 class="text center">Choose Employes to be Removed</h3>
+    <hr>
+    
+    {% for empr in rem_emp %}
+
+    <a class="dropdown-item" href="/remove_emp/{{empr.id}}">{{forloop.counter}}. {{empr.fname}} {{empr.lname}} </a>
+    
+    {% endfor %}
+</div>
+
+
+{% endblock contentbody %}

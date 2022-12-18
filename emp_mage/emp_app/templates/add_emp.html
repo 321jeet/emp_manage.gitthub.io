@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+
+{% block contentbody %}
+  
+
+<div class="container">
+
+    <form action="/add_emp" method="POST">
+        {% csrf_token %}
+        <div class="col-md-10">
+            <label for="fullname" class="form-label">First Name</label>
+            <input type="text" class="form-control" name="fname" id="fname">
+        </div>
+        <div class="col-md-10">
+            <label for="lastname" class="form-label">lastname</label>
+            <input type="text" class="form-control" name="lname" id="email">
+        </div>
+        <div class="col-md-10">
+            <label for="department" class="form-label">Department</label>
+            <input type="text" class="form-control" id="dept" name="dept" >
+        </div>
+        <div class="col-md-10">
+            <label for="inputZip" class="form-label">Salary</label>
+            <input type="text" class="form-control" id="inputsalary" name="salary">
+        </div>
+        <div class="col-md-10">
+            <label for="inputCity" class="form-label">bouns</label>
+            <input type="text" class="form-control" id="inputbonus" name="bonus">
+        </div>
+        <div class="col-md-10">
+            <label for="inputCity" class="form-label">role</label>
+            <input type="text" class="form-control" id="inputrole" name="role">
+        </div>
+        <div class="col-md-10">
+            <label for="phone" class="form-label">Phone</label>
+            <input type="text" class="form-control" name="phone" id="phone">
+        </div>
+        <div class="col-md-10">
+            <label for="phone" class="form-label">Hire Date</label>
+            <input type="date" class="form-control" name="hire_date" id="date">
+        </div>
+
+        <div class="col-md-10">
+
+            <input type="submit" class="btn btn-primary" value="Submit">
+        </div>
+    </form>
+</div>
+{% endblock contentbody %}
